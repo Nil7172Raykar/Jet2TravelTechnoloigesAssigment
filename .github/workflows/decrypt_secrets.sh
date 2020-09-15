@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eo pipefail
 
-gpg --quiet --batch --yes --decrypt --passphrase="$MEGACONFERENCE_APPSTORE_PROFILE" --output ./.github/secrets/MegaConference_Appstore_Profile.mobileprovision ./.github/secrets/MegaConference_Appstore_Profile.mobileprovision.gpg
-gpg --quiet --batch --yes --decrypt --passphrase="$WHIZ_DISTRIBUTION_CERTIFICATE_AND_KEY" --output ./.github/secrets/Whiz_Distribution_Certificate_And_Key.p12 ./.github/secrets/Whiz_Distribution_Certificate_And_Key.p12.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/MegaConference_Appstore_Profile.mobileprovision ./.github/secrets/MegaConference_Appstore_Profile.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$IOS_KEYS" --output ./.github/secrets/Whiz_Distribution_Certificate_And_Key.p12 ./.github/secrets/Whiz_Distribution_Certificate_And_Key.p12.gpg
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 
